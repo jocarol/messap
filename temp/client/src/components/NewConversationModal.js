@@ -10,8 +10,7 @@ const NewConversationModal = ({ closeModal }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        createConversation(selectedContactIds);
+        createConversation(setSelectedContactIds);
         closeModal();
     }
 

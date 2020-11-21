@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Tab, Nav, Button, Modal } from 'react-bootstrap';
 import Contacts from './Contacts';
-import ConversationsList from './ConversationsList';
+import Conversations from './Conversations';
 import NewContactModal from './NewContactModal';
 import NewConversationsModal from './NewConversationModal';
 
@@ -30,7 +30,7 @@ const Sidebar = ({ id }) => {
                 </Nav>
                 <Tab.Content className="border-right overflow-auto flex-grow-1">
                     <Tab.Pane eventKey={CONVERSATIONS_KEY}>
-                        <ConversationsList />
+                        <Conversations />
                     </Tab.Pane>
                     <Tab.Pane eventKey={CONTACTS_KEY}>
                         <Contacts />
