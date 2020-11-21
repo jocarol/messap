@@ -1,0 +1,11 @@
+{
+  "name": "messap-server",
+  "version": "1.0.0",
+  "description": "A brand new Messap© server",
+  "main": "index.js",
+  "author": "Joris Carol",
+  "license": "MIT",
+  "dependencies": {
+    "socket.io": "^3.0.3"
+  }
+}

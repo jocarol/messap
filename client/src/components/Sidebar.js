@@ -40,8 +40,7 @@ const Sidebar = ({ id }) => {
                     Your ID: <span className="text-muted">{id}</span>
                 </div>
                 <Button onClick={() => setModalOpen(true)} className="rounded-0">
-                    New {isMessageOpen
-                        ? 'conversation' : 'contact'}
+                    New {isMessageOpen ? 'conversation' : 'contact'}
                 </Button>
             </Tab.Container>
             <Modal show={isModalOpen} onHide={closeModal} >
