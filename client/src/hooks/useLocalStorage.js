@@ -5,9 +5,9 @@ const PREFIX = 'messapp-';
 const useLocalStorage = (key, initialValue) => {
     const prefixedKey = PREFIX + key;
     const [value, setValue] = useState(() => {
-        const jsonValue = localStorage.getItem(prefixedKey);
+        const jsonValue = localStorage.getItem(prefixedKey) || null;
 
-        if (jsonValue != null) return JSON.parse(jsonValue);
+        if (jsonValue !== null) return JSON.parse(jsonValue);
         if (typeof initialValue === 'function') {
             return initialValue();
         } else {

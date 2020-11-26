@@ -5,6 +5,8 @@ import { useConversations } from '../contexts/ConversationsProvider';
 const Conversation = () => {
     const [textMessage, setTextMessage] = useState('');
     const { sendMessage, selectedConversation } = useConversations();
+    // Callback used to target the last message as a ref, in order to
+    // automatically scroll to the last message
     const setRef = useCallback(
         (node) => {
             node && node.scrollIntoView({ smooth: true });
@@ -12,6 +14,7 @@ const Conversation = () => {
         [],
     )
 
+    // Prevent default POST behaviour on submit event
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -27,7 +30,9 @@ const Conversation = () => {
             <div className="flex-grow-1 overflow-auto">
                 <div className="d-flex flex-column
                 align-items-start justify-content-end px-3">
-                    {selectedConversation.messages.map((message, index) => {
+                    {
+                    // Maps conversation messages to divs that displays them
+                    selectedConversation.messages.map((message, index) => {
                         const lastMessage = selectedConversation.messages.length - 1 === index;
                         return (
                             <div
@@ -46,6 +51,9 @@ const Conversation = () => {
                     })}
                 </div>
             </div>
+            {
+                // Message input & send button area 
+            }
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="m-2">
                     <InputGroup>

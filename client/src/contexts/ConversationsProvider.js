@@ -34,8 +34,8 @@ export const ConversationsProvider = ({ id, children }) => {
             const newConversations = prevConversations.map(conversation => {
                 if (arrayEquality(conversation.recipients, recipients)) {
                     madeChange = true;
+                    console.log(conversation);
                     return {
-                        // LOG HERE WHAT THE FUCK IS '...CONVERSATION' LIKE
                         ...conversation,
                         messages: [...conversation.messages, newMessage],
                     }
