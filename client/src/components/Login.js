@@ -22,8 +22,8 @@ const Login = ({ setId }) => {
                     <Form.Label>Enter your ID</Form.Label>
                     <Form.Control type="text" ref={idRef} required/>
                 </Form.Group>
-                <Button type="submit" className="mr-2">Login</Button>
-                <Button onClick={createNewId} variant="secondary">Create a new Messap ID</Button>
+                <Button onClick={createNewId} variant="primary" className="mr-2">Create a new Messap ID</Button>
+                <Button type="submit" variant="secondary" className="mr-2">Login</Button>
             </Form>
         </Container>
         )

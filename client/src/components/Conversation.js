@@ -5,8 +5,10 @@ import { useConversations } from '../contexts/ConversationsProvider';
 const Conversation = () => {
     const [textMessage, setTextMessage] = useState('');
     const { sendMessage, selectedConversation } = useConversations();
+
     // Callback used to target the last message as a ref, in order to
     // automatically scroll to the last message
+
     const setRef = useCallback(
         (node) => {
             node && node.scrollIntoView({ smooth: true });
@@ -15,6 +17,7 @@ const Conversation = () => {
     )
 
     // Prevent default POST behaviour on submit event
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -31,11 +34,18 @@ const Conversation = () => {
                 <div className="d-flex flex-column
                 align-items-start justify-content-end px-3">
                     {
+                    
                     // Maps conversation messages to divs that displays them
+                    
                     selectedConversation.messages.map((message, index) => {
                         const lastMessage = selectedConversation.messages.length - 1 === index;
                         return (
                             <div
+                    
+                               // Perform a check wether the mapped message is the last of the
+                                // selectedConversation array. If that's the case, then set its 'ref'
+                                // attribute to 'setRef', so the viewport will be scrolled to the last message.
+                    
                                 ref={lastMessage ? setRef : null}
                                 key={index}
                                 className={`my-1 d-flex flex-column ${message.fromMe ? 'align-self-end' : ''}`}
