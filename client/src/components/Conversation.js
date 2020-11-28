@@ -42,7 +42,7 @@ const Conversation = () => {
                         return (
                             <div
                     
-                               // Perform a check wether the mapped message is the last of the
+                                // Perform a check wether the mapped message is the last of the
                                 // selectedConversation array. If that's the case, then set its 'ref'
                                 // attribute to 'setRef', so the viewport will be scrolled to the last message.
                     
@@ -65,16 +65,17 @@ const Conversation = () => {
                 // Message input & send button area 
             }
             <Form onSubmit={handleSubmit}>
-                <Form.Group className="m-2">
+                <Form.Group className="message-input">
                     <InputGroup>
                         <Form.Control
+                        className="message-text-area"
                             as="textarea"
                             required
                             value={textMessage}
                             onChange={(e) => setTextMessage(e.target.value)}
                         />
                         <InputGroup.Append>
-                            <Button type="submit">Send</Button>
+                            <Button type="submit" className="send-button"><strong>Send</strong></Button>
                         </InputGroup.Append>
                     </InputGroup>
                 </Form.Group>

@@ -10,10 +10,11 @@ const Conversations = () => {
         <ListGroup variant="flush">
             {conversations.map((conversation, index) => (
                 <ListGroup.Item
-                key={index}
-                onClick={() => selectConversationIndex(index)}
-                active={conversation.selected}
-                action>
+                    key={index}
+                    onClick={() => selectConversationIndex(index)}
+                    active={conversation.selected}
+                    action
+                >
                     {conversation.recipients.map(recipient => recipient.name).join(', ')}
                 </ListGroup.Item>
             ))}

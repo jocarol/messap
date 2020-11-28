@@ -28,7 +28,7 @@ const Sidebar = ({ id }) => {
                         <Nav.Link eventKey={CONTACTS_KEY}>Contacts</Nav.Link>
                     </Nav.Item>
                 </Nav>
-                <Tab.Content className="border-right overflow-auto flex-grow-1">
+                <Tab.Content className="overflow-auto flex-grow-1">
                     <Tab.Pane eventKey={CONVERSATIONS_KEY}>
                         <ConversationsList />
                     </Tab.Pane>
@@ -36,14 +36,14 @@ const Sidebar = ({ id }) => {
                         <Contacts />
                     </Tab.Pane>
                 </Tab.Content>
-                <div className="p-2 border-top border-right small">
-                    Your ID: <span className="text-muted">{id}</span>
+                <div className="p-2 small">
+                    <span className="my-id">My Messap© ID:</span> <span className="text-muted">{id}</span>
                 </div>
-                <Button onClick={() => setModalOpen(true)} className="rounded-0">
-                    New {isMessageOpen ? 'conversation' : 'contact'}
+                <Button onClick={() => setModalOpen(true)} className="rounded-0 new-action gradient">
+                    <strong>New {isMessageOpen ? 'conversation' : 'contact'}</strong>
                 </Button>
             </Tab.Container>
-            <Modal show={isModalOpen} onHide={closeModal} >
+            <Modal show={isModalOpen} onHide={closeModal} > 
                 {isMessageOpen ?
                     <NewConversationsModal closeModal={closeModal} /> :
                     <NewContactModal closeModal={closeModal} />

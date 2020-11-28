@@ -1,8 +1,103 @@
-// change the theme
+// change the theme variables
 $theme-colors: (
-  "primary": #0074d9,
+  "primary": #00c0d9,
   "danger": #ff4136
 );
+
+#root {
+    background-color: #1b1a1a;
+}
+
+
+.form-label {
+  color: #646464;
+}
+
+// Sidebar background
+.overflow-auto.flex-grow-1.tab-content {
+    background-color: #232323;
+}
+
+// My ID area background
+.p-2.small {
+  background-color: rgb(32, 32, 32);
+}
+
+// My ID span
+.my-id {
+  color: #c3c3c3;
+  background-color: #262626;
+}
+
+// Nav tabs
+.nav-tabs {
+  border: unset !important;
+  border-bottom: unset !important;
+}
+
+.nav-link:hover {
+    color: #646464 !important;
+}
+
+.nav-tabs .nav-link {
+  border: unset !important;
+}
+
+.nav-tabs .nav-link.active {
+  color: #b8b8b8 !important;
+  background-color: rgb(32, 32, 32) !important;
+  border: unset !important;
+}
+
+.nav-link:hover:focus {
+    border: unset !important;
+}
+
+// Selected item
+.gradient {
+  background-image: linear-gradient(to left, #00c0d9, #00d986);;
+}
+
+
+// Bootstrap primary button overwrite
+.btn-primary {
+  background-color: #00c0d9;
+  border: unset !important;
+}
+
+// Links
+.nav-link {
+  color: #4d4d4d !important;
+}
+
+// Sidebar List
+.list-group-item.list-group-item-action {
+  background-color: #232323 !important;
+}
+
+.list-group-item.list-group-item-action.active {
+  background-color: #00c0d9 !important;
+  border: unset !important;
+}
+
+// Message Input
+.message-input.form-group {
+    margin-bottom: unset !important;
+}
+
+.message-text-area {
+  border-radius: unset !important;
+}
+
+.send-button {
+  background-image: unset !important;
+  min-width: 100px;
+}
+
+// Misc
+.new-action {
+  height: 4.6rem; 
+}
 
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
