@@ -83,6 +83,11 @@ $theme-colors: (
 // Message Input
 .message-input.form-group {
     margin-bottom: unset !important;
+    height: 4.6rem;
+}
+
+.input-group {
+  height: 100% !important;
 }
 
 .message-text-area {
