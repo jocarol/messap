@@ -1,11 +1,15 @@
 #root {
   background-color: #1b1a1a;
+  outline: none !important;
+}
+
+body {
+  outline: none !important;
 }
 
 .bg-primary {
   background-image: linear-gradient(to left, #00c0d9, #00d986);
 }
-
 
 .form-label {
   color: #646464;
@@ -56,7 +60,6 @@
   background-image: linear-gradient(to left, #00c0d9, #00d986);
 }
 
-
 /* Bootstrap primary button overwrite */
 .btn-primary {
   background-color: #00c0d9;
@@ -70,6 +73,14 @@
 
 .btn-primary:hover {
   background-color: #00d986 !important;
+}
+
+.btn-primary:disabled {
+  background-color: #00a2b8;
+}
+
+.btn-primary:disabled:hover {
+  background-color: #02af6d;
 }
 
 /* Links */
@@ -86,6 +97,7 @@
   background-color: #00c0d9 !important;
   border: unset !important;
   color: white !important ;
+  transition: all 0.5s ease-out;
 }
 
 .list-group-item.list-group-item-action {
@@ -123,6 +135,10 @@
   border-radius: unset !important;
 }
 
+.send-button.btn.btn-primary:focus {
+  background-color: #00d986 !important;
+}
+
 /* Misc */
 .new-action {
   height: 4.6rem;
@@ -136,4 +152,27 @@
 .outgoing-bubble {
   border-radius: 15px 0px 15px 15px !important;
   background-color: #00c0d9;
+}
+
+/* Modal */
+.modal-content {
+  background-color: #212529 !important;
+}
+
+.modal-header {
+  border-bottom: 1px solid #1b1a1a;
+  color: #777777;
+}
+
+.form-check-label {
+  color: #b8b8b8;
+  padding-left: 10px !important;
+}
+
+.close {
+  color: #b8b8b8;
+}
+
+.close:hover {
+  color: #c3c3c3;
 }

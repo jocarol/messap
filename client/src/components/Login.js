@@ -7,7 +7,7 @@ const Login = ({ setId }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        
+
         setId(idRef.current.value);
     }
 
@@ -20,13 +20,13 @@ const Login = ({ setId }) => {
             <Form onSubmit={handleSubmit} className="w-100">
                 <Form.Group>
                     <Form.Label>Enter your ID</Form.Label>
-                    <Form.Control type="text" ref={idRef} required/>
+                    <Form.Control type="text" ref={idRef} required />
                 </Form.Group>
                 <Button onClick={createNewId} variant="primary" className="mr-2">Create a new Messap ID</Button>
                 <Button type="submit" variant="secondary" className="mr-2">Login</Button>
             </Form>
         </Container>
-        )
+    )
 }
 
 export default Login;

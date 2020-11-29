@@ -43,7 +43,7 @@ const Sidebar = ({ id }) => {
                     <strong>New {isMessageOpen ? 'conversation' : 'contact'}</strong>
                 </Button>
             </Tab.Container>
-            <Modal show={isModalOpen} onHide={closeModal} > 
+            <Modal show={isModalOpen} onHide={closeModal} >
                 {isMessageOpen ?
                     <NewConversationsModal closeModal={closeModal} /> :
                     <NewContactModal closeModal={closeModal} />

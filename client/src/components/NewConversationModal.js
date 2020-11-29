@@ -35,28 +35,32 @@ const NewConversationModal = ({ closeModal }) => {
         })
     }
 
+
     return (
         <>
             <Modal.Header closeButton>Select contacts</Modal.Header>
             <Modal.Body>
-                <Form onSubmit={handleSubmit}>
-                    {
-                        // We map each contact of the contacts array to output a
-                        // corersponding form field. 
-                        contacts.map(contact => (
-                            <Form.Group controlId={contact.id} key={contact.id}>
-                                <Form.Check
-                                    type="checkbox"
-                                    // Check if the checkbox should be rendered as checked
-                                    value={selectedContactIds.includes(contact.id)}
-                                    label={contact.name}
-                                    onChange={() => handleCheckBoxChange(contact.id)}
-                                />
-                            </Form.Group>
-                        ))
-                    }
-                    <Button type="submit">Create Conversation</Button>
-                </Form>
+                {contacts.length > 0 ?
+                    <Form onSubmit={handleSubmit}>
+                        {
+                            // We map each contact of the contacts array to output a
+                            // corersponding form field. 
+                            contacts.map(contact => (
+                                <Form.Group controlId={contact.id} key={contact.id}>
+                                    <Form.Check
+                                        type="checkbox"
+                                        // Check if the checkbox should be rendered as checked
+                                        value={selectedContactIds.includes(contact.id)}
+                                        label={contact.name}
+                                        onChange={() => handleCheckBoxChange(contact.id)}
+                                    />
+                                </Form.Group>
+                            ))
+                        }
+                        <Button type="submit" disabled={selectedContactIds.length === 0}>Create Conversation</Button>
+                    </Form> :
+                    <h4 style={{ color: '#777777' }}>Gasp! You need to add contacts before messaging them</h4>
+                }
             </Modal.Body>
         </>
     )
