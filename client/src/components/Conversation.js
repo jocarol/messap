@@ -34,31 +34,31 @@ const Conversation = () => {
                 <div className="d-flex flex-column
                 align-items-start justify-content-end px-3">
                     {
-                    
-                    // Maps conversation messages to divs that displays them
-                    
-                    selectedConversation.messages.map((message, index) => {
-                        const lastMessage = selectedConversation.messages.length - 1 === index;
-                        return (
-                            <div
-                    
-                                // Perform a check wether the mapped message is the last of the
-                                // selectedConversation array. If that's the case, then set its 'ref'
-                                // attribute to 'setRef', so the viewport will be scrolled to the last message.
-                    
-                                ref={lastMessage ? setRef : null}
-                                key={index}
-                                className={`my-1 d-flex flex-column ${message.fromMe ? 'align-self-end align-items-end' : 'aligh-items-start'}`}
-                            >
+
+                        // Maps conversation messages to divs that displays them
+
+                        selectedConversation.messages.map((message, index) => {
+                            const lastMessage = selectedConversation.messages.length - 1 === index;
+                            return (
                                 <div
-                                    className={`px-2 py-1 message-bubble ${message.fromMe ? 'bg-primary text-white outgoing-bubble' : 'incoming-bubble text-white'}`}>
-                                    {message.text}</div>
-                                <div className={`text-muted small ${message.fromMe ? 'text-right' : ''}`}>
-                                    {message.fromMe ? "You" : message.senderName}
+
+                                    // Perform a check wether the mapped message is the last of the
+                                    // selectedConversation array. If that's the case, then set its 'ref'
+                                    // attribute to 'setRef', so the viewport will be scrolled to the last message.
+
+                                    ref={lastMessage ? setRef : null}
+                                    key={index}
+                                    className={`my-1 d-flex flex-column ${message.fromMe ? 'align-self-end align-items-end' : 'aligh-items-start'}`}
+                                >
+                                    <div
+                                        className={`px-2 py-1 message-bubble ${message.fromMe ? 'text-white outgoing-bubble' : 'incoming-bubble text-white'}`}>
+                                        {message.text}</div>
+                                    <div className={`text-muted small ${message.fromMe ? 'text-right' : ''}`}>
+                                        {message.fromMe ? "You" : message.senderName}
+                                    </div>
                                 </div>
-                            </div>
-                        )
-                    })}
+                            )
+                        })}
                 </div>
             </div>
             {
@@ -68,7 +68,7 @@ const Conversation = () => {
                 <Form.Group className="message-input">
                     <InputGroup>
                         <Form.Control
-                        className="message-text-area"
+                            className="message-text-area"
                             as="textarea"
                             required
                             value={textMessage}

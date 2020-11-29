@@ -2,6 +2,11 @@
   background-color: #1b1a1a;
 }
 
+.bg-primary {
+  background-image: linear-gradient(to left, #00c0d9, #00d986);
+}
+
+
 .form-label {
   color: #646464;
 }
@@ -13,7 +18,7 @@
 
 /* My ID area background */
 .p-2.small {
-  background-color: rgb(32, 32, 32);
+  background-color: #1e1d1d;
 }
 
 /* My ID span */
@@ -51,10 +56,20 @@
   background-image: linear-gradient(to left, #00c0d9, #00d986);
 }
 
+
 /* Bootstrap primary button overwrite */
 .btn-primary {
   background-color: #00c0d9;
   border: unset !important;
+}
+
+.btn-primary {
+  background-color: #00c0d9;
+  border: unset !important;
+}
+
+.btn-primary:hover {
+  background-color: #00d986 !important;
 }
 
 /* Links */
@@ -105,7 +120,7 @@
 
 .send-button {
   background-image: unset !important;
-  min-width: 100px;
+  border-radius: unset !important;
 }
 
 /* Misc */
@@ -114,10 +129,11 @@
 }
 
 .incoming-bubble {
+  border-radius: 0px 15px 15px 15px !important;
   background-color: #00d986;
-  border-radius: 0px 25px 25px 25px !important;
 }
 
 .outgoing-bubble {
-  border-radius: 25px 0px 25px 25px !important;
+  border-radius: 15px 0px 15px 15px !important;
+  background-color: #00c0d9;
 }
