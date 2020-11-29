@@ -34,7 +34,6 @@ export const ConversationsProvider = ({ id, children }) => {
             const newConversations = prevConversations.map(conversation => {
                 if (arrayEquality(conversation.recipients, recipients)) {
                     madeChange = true;
-                    console.log(conversation);
                     return {
                         ...conversation,
                         messages: [...conversation.messages, newMessage],
@@ -73,7 +72,6 @@ export const ConversationsProvider = ({ id, children }) => {
             return { id: recipient, name };
         })
 
-        console.log(conversation);
         const messages = conversation.messages.map(message => {
             const contact = contacts.find(contact => {
                 return contact.id === message.sender;
