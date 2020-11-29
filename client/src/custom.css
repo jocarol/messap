@@ -1,42 +1,35 @@
-// change the theme variables
-$theme-colors: (
-  "primary": #00c0d9,
-  "danger": #ff4136
-);
-
 #root {
-    background-color: #1b1a1a;
+  background-color: #1b1a1a;
 }
-
 
 .form-label {
   color: #646464;
 }
 
-// Sidebar background
+/* Sidebar background */
 .overflow-auto.flex-grow-1.tab-content {
-    background-color: #232323;
+  background-color: #232323;
 }
 
-// My ID area background
+/* My ID area background */
 .p-2.small {
   background-color: rgb(32, 32, 32);
 }
 
-// My ID span
+/* My ID span */
 .my-id {
   color: #c3c3c3;
   background-color: #262626;
 }
 
-// Nav tabs
+/* Nav tabs */
 .nav-tabs {
   border: unset !important;
   border-bottom: unset !important;
 }
 
 .nav-link:hover {
-    color: #646464 !important;
+  color: #646464 !important;
 }
 
 .nav-tabs .nav-link {
@@ -50,27 +43,26 @@ $theme-colors: (
 }
 
 .nav-link:hover:focus {
-    border: unset !important;
+  border: unset !important;
 }
 
-// Selected item
+/* Selected item */
 .gradient {
-  background-image: linear-gradient(to left, #00c0d9, #00d986);;
+  background-image: linear-gradient(to left, #00c0d9, #00d986);
 }
 
-
-// Bootstrap primary button overwrite
+/* Bootstrap primary button overwrite */
 .btn-primary {
   background-color: #00c0d9;
   border: unset !important;
 }
 
-// Links
+/* Links */
 .nav-link {
   color: #4d4d4d !important;
 }
 
-// Sidebar List
+/* Sidebar List */
 .list-group-item.list-group-item-action {
   background-color: #232323 !important;
 }
@@ -78,12 +70,29 @@ $theme-colors: (
 .list-group-item.list-group-item-action.active {
   background-color: #00c0d9 !important;
   border: unset !important;
+  color: white !important ;
 }
 
-// Message Input
+.list-group-item.list-group-item-action {
+  color: #777777;
+}
+
+.list-group-item.list-group-item-action:hover {
+  color: #b8b8b8;
+}
+
+.list-group-flush > .list-group-item {
+  border-width: 0 0 3px !important;
+}
+
+.list-group-flush > .list-group-item:last-child {
+  border-bottom-width: 3px !important;
+}
+
+/* Message Input */
 .message-input.form-group {
-    margin-bottom: unset !important;
-    height: 4.6rem;
+  margin-bottom: unset !important;
+  height: 4.6rem;
 }
 
 .input-group {
@@ -99,10 +108,16 @@ $theme-colors: (
   min-width: 100px;
 }
 
-// Misc
+/* Misc */
 .new-action {
-  height: 4.6rem; 
+  height: 4.6rem;
 }
 
-// Import Bootstrap and its default variables
-@import '~bootstrap/scss/bootstrap.scss';
+.incoming-bubble {
+  background-color: #00d986;
+  border-radius: 0px 25px 25px 25px !important;
+}
+
+.outgoing-bubble {
+  border-radius: 25px 0px 25px 25px !important;
+}
