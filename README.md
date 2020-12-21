@@ -26,4 +26,6 @@ New users should generate a new ID in order to be able to broadcast messages. Th
 
 Any client in the network can join the local address the app is running on. Since the ID is managed in the local storage, you can also open multiple clients in a private browser. When adding a new contact, this ID is the ID you need to input in the ID form field.
 
+![alt](https://i.imgur.com/oCSt4NK.png)
+
 Messap allows multiple users conversations, make sure to try it out ;)
