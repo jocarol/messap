@@ -1,6 +1,9 @@
 # Messap Instant Messaging
 
-##### Messap is a simple Instant Messaging application. Node.js & Express is powering the back, while React & Bootstrap takes care of the front. Client <=> Server communication is handled over a Socket.io web socket.
+![alt](https://i.imgur.com/cJQlUNH.png)
+
+## Info
+#### Messap is a simple Instant Messaging application. Node.js & Express is powering the back, while React & Bootstrap takes care of the front. Client <=> Server communication is handled over a Socket.io web socket.
 
 Data is stored in the local storage, which is not recommended when storing sensitive data, even if it is possible to encrypt said data in order to evade cons of this storage method. However, the scope of this project is mainly focused on the rendering of a specific data flow. Persistent data storage over a mongo db instance is covered in the [Social CRUD project](https://github.com/jocarol/social-crud) you can find in my repos.
 
